@@ -1,6 +1,7 @@
 import random
 import pandas as pd
 
+#number of teams to split the participants
 N_TEAMS = 4
 
 # def n_team_participants(positions):
