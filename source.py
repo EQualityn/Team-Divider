@@ -5,10 +5,10 @@ import pandas as pd
 N_TEAMS = 4
 
 # def n_team_participants(positions):
-#     teams = []
+#     n_in_teams = []
 #     for i in  range (0,N_TEAMS):
 #         teams.append(positions.count(i+1))
-#     return teams
+#     return n_in_teams
 
 data = pd.read_csv("spam.csv")
 positions = [0 for x in range(len(data))]
@@ -24,5 +24,5 @@ for i in range (len(data)):
 
 
 for i in range (len(data)):
-    data.loc[i, 'number'] = positions[i]
+    data.loc[i, 'number'] = str(positions[i])
 data.to_csv("spam.csv", index=False)
