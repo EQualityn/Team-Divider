@@ -4,11 +4,11 @@ import pandas as pd
 #number of teams to split the participants
 N_TEAMS = 4
 
-# def n_team_participants(positions):
-#     n_in_teams = []
-#     for i in  range (0,N_TEAMS):
-#         teams.append(positions.count(i+1))
-#     return n_in_teams
+def n_team_participants(positions):
+    n_in_teams = []
+    for i in  range (0,N_TEAMS):
+        n_in_teams.append(positions.count(i+1))
+    return n_in_teams
 
 data = pd.read_csv("spam.csv")
 positions = [0 for x in range(len(data))]
