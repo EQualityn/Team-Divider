@@ -2,7 +2,21 @@ import random
 import pandas as pd
 
 #number of teams to split the participants
+
 N_TEAMS = 4
+
+while True:
+    try:
+        N_TEAMS = int(input("Enter amount of teams: "))
+    except ValueError:
+        print("Invalid input, enter a number")
+        continue
+    if N_TEAMS <= 0:
+        print("Invalid input, enter a number above zero")
+        continue
+    else:
+        break
+
 
 def n_team_participants(positions):
     n_in_teams = []
